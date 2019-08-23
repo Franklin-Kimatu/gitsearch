@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{ GitsearchUser } from '../user/gitsearch-user'
+import {MyServiceService} from '../service/my-service.service'
 @Component({
   selector: 'app-gitsearch',
   templateUrl: './gitsearch.component.html',
@@ -11,9 +12,10 @@ export class GitsearchComponent implements OnInit {
   searchThis(searchTerm){
     console.log(searchTerm);
   }
-  constructor() { }
+  constructor(public myService:MyServiceService) { }
 
   ngOnInit() {
+    this.myService.searchUser("anything")
   }
 
 }
