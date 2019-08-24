@@ -1,2 +1,16 @@
 <app-navbar></app-navbar>
 <app-gitsearch-form (emitSearch)="searchThis($event)"></app-gitsearch-form>
+<!-- <div *ngIf="users">
+    <div class="cards-columns">
+       <p>{{name}}</p> 
+    </div>
+</div> -->
+<div *ngIf="users">
+    <div class="cards-columns">
+        <div *ngFor="let user of users">
+            <div class="card">
+                <p>{{users.name}}</p>
+            </div>
+        </div>
+    </div>
+</div>

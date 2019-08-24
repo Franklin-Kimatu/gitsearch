@@ -10,17 +10,20 @@ export class MyServiceService {
   constructor(private http:HttpClient) { }
 
   searchUsers(searchTerm:string){
-    let searchEndPoint = "https://api.github.com/users/Franklin-Kimatu?access_token="+ environment.GITSEARCHAPIKEY;
-    searchEndPoint= searchEndPoint+ "&q"+searchTerm;
+    let searchEndPoint = "https://api.github.com/users/"+searchTerm+"?access_token="+ environment.GITSEARCHAPIKEY;
+    // searchEndPoint= searchEndPoint+ "&q"+searchTerm;
     let promise = new Promise((resolve,reject)=>{
       this.http.get(searchEndPoint).toPromise().then(
         (results)=>{
-          this.users=[];
-          let url = results["url"];
-          let use =new GitsearchUser("","",0,0,0,url);
-          this.users.push(use);
+          let name = results["name"];
+          console.log(name);
+          // console.log(results["name"])
+           this.users=[];
+          // let name = results["name"];
+          // let use =new GitsearchUser("",name,23,0,0,"");
+          this.users.push(name);
 
-          console.log(this.users);
+          // console.log(this.users);
           resolve()
         },
         (error)=>{
