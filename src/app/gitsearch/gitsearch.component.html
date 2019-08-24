@@ -5,11 +5,12 @@
        <p>{{name}}</p> 
     </div>
 </div> -->
+
 <div *ngIf="users">
     <div class="cards-columns">
         <div *ngFor="let user of users">
             <div class="card">
-                <p>{{user.name}}</p>
+                <p>{{user.login}}</p>
                 
             </div>
         </div>
@@ -25,7 +26,18 @@
             <div *ngFor="let user of users">
                 <div class="card">
                     <img src="{{user.avatar_url}}" class="card-img">
+                    <button class="btn btn-success">{{user.followers}} followers</button>
+                    <button class="btn btn-success">{{user.following}} following</button>
                 </div>
             </div>
         </div>
+</div>
+<div *ngIf="users">
+    <div class="cards-colmns">
+        <div *ngFor="let user of users">
+            <div class="card">
+                <a href="{{user.repos_url}}">{{user.public_repos}}&nbsp;Repositories</a>
+            </div>
+        </div>
+    </div>
 </div>

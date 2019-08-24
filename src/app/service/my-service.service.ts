@@ -8,6 +8,7 @@ import{ Repositories } from '../repository/repositories';
 })
 export class MyServiceService {
   users:GitsearchUser[]=[];
+  repos:Repositories[];
   constructor(public http:HttpClient) { }
 
   searchUsers(searchTerm:string){
@@ -16,7 +17,8 @@ export class MyServiceService {
     let promise = new Promise((resolve,reject)=>{
       this.http.get(searchEndPoint).toPromise().then(
         (results)=>{
-          let name = results;
+          let name:any = results;
+          let repo:any= results["repos_url"];
           // let image = results["avatar_url"]
           // console.log(name);
           // console.log(results["name"])
@@ -24,6 +26,7 @@ export class MyServiceService {
           // let use =new GitsearchUser("","",name,23,0,0,"");
          // let us= use.name;
           this.users.push(name);
+          this.users.push(repo);
           // this.users.push(image);
 
           console.log(this.users);

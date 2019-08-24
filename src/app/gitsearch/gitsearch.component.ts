@@ -23,7 +23,7 @@ export class GitsearchComponent implements OnInit {
   constructor(public myService:MyServiceService) { }
 
   ngOnInit() {
-      // this.myService.searchUsers("Franklin-Kimatu")
+      this.myService.searchUsers("Franklin-Kimatu")
   }
 
 }
