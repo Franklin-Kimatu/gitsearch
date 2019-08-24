@@ -9,8 +9,23 @@
     <div class="cards-columns">
         <div *ngFor="let user of users">
             <div class="card">
-                <p>{{users.name}}</p>
+                <p>{{user.name}}</p>
+                
             </div>
         </div>
     </div>
+</div>
+<!-- <ul>
+    <li *ngFor=let user of users.results>
+        {{user.name}}
+    </li>
+</ul> -->
+<div *ngIf="users">
+        <div class="card-columns">
+            <div *ngFor="let user of users">
+                <div class="card">
+                    <img src="{{user.avatar_url}}" class="card-img">
+                </div>
+            </div>
+        </div>
 </div>

@@ -7,7 +7,7 @@ import {MyServiceService} from '../service/my-service.service'
   styleUrls: ['./gitsearch.component.css']
 })
 export class GitsearchComponent implements OnInit {
-  users:GitsearchUser[];
+  users:GitsearchUser[]=[];
   
   searchThis(searchTerm){
     this.myService.searchUsers(searchTerm).then(
@@ -23,7 +23,7 @@ export class GitsearchComponent implements OnInit {
   constructor(public myService:MyServiceService) { }
 
   ngOnInit() {
-    this.myService.searchUsers("Franklin-Kimatu")
+      // this.myService.searchUsers("Franklin-Kimatu")
   }
 
 }
