@@ -1,43 +1,56 @@
 <app-navbar></app-navbar>
-<app-gitsearch-form (emitSearch)="searchThis($event)"></app-gitsearch-form>
-<!-- <div *ngIf="users">
-    <div class="cards-columns">
-       <p>{{name}}</p> 
-    </div>
-</div> -->
-
-<div *ngIf="users">
-    <div class="cards-columns">
-        <div *ngFor="let user of users">
-            <div class="card">
-                <p>{{user.login}}</p>
-                
+<div class="container">
+        <app-gitsearch-form (emitSearch)="searchThis($event)"></app-gitsearch-form>
+        <!-- <div *ngIf="users">
+            <div class="cards-columns">
+               <p>{{name}}</p> 
             </div>
-        </div>
-    </div>
-</div>
-<!-- <ul>
-    <li *ngFor=let user of users.results>
-        {{user.name}}
-    </li>
-</ul> -->
-<div *ngIf="users">
-        <div class="card-columns">
-            <div *ngFor="let user of users">
-                <div class="card">
-                    <img src="{{user.avatar_url}}" class="card-img">
-                    <button class="btn btn-success">{{user.followers}} followers</button>
-                    <button class="btn btn-success">{{user.following}} following</button>
+        </div> -->
+        
+        <div *ngIf="users">
+            <div class="cards-columns">
+                <div *ngFor="let user of users">
+                    <div class="card">
+                        <p>{{user.login}}</p>
+                        
+                    </div>
                 </div>
             </div>
         </div>
-</div>
-<div *ngIf="users">
-    <div class="cards-colmns">
-        <div *ngFor="let user of users">
-            <div class="card">
-                <a href="{{user.repos_url}}">{{user.public_repos}}&nbsp;Repositories</a>
+        <!-- <ul>
+            <li *ngFor=let user of users.results>
+                {{user.name}}
+            </li>
+        </ul> -->
+        <div *ngIf="users">
+                <div class="card-columns">
+                    <div *ngFor="let user of users">
+                        <div class="card">
+                            <img src="{{user.avatar_url}}" class="card-img">
+                            <button class="btn btn-success">{{user.followers}} followers</button>&nbsp;&nbsp;
+                            <button class="btn btn-success">{{user.following}} following</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div *ngIf="users">
+            <div class="cards-columns">
+                <div *ngFor="let user of users">
+                    <div class="card">
+                        <!-- <a href="{{user.repos_url}}">{{user.public_repos}}&nbsp;Repositories</a> -->
+                        <button class="btn btn-success"(click)="searchRepos($event)">Repositories</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+
+        <div *ngIf="repos">
+            <div class="cards-columns">
+                <div *ngFor="let repo of repos">
+                    <div class="card">
+                        {{repo.name}}
+                    </div>
+                </div>
+            </div>
+        </div>
 </div>
