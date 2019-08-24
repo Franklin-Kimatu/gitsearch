@@ -10,12 +10,19 @@ export class GitsearchComponent implements OnInit {
   users:GitsearchUser[];
   
   searchThis(searchTerm){
-    console.log(searchTerm);
+    this.myService.searchUsers(searchTerm).then(
+      ()=>{
+        this.users= this.myService.users;
+      },
+      (error)=>{
+        console.log(error)
+      }
+    )
   }
   constructor(public myService:MyServiceService) { }
 
   ngOnInit() {
-    this.myService.searchUser("anything")
+    this.myService.searchUsers("anything")
   }
 
 }
