@@ -24,12 +24,14 @@ button{
 .userlogin{
     color:white;
     margin-left:40%;
+    font-family: 'Nunito', sans-serif;
 }
 hr{
     background-color: whitesmoke;
 }
 h4{
-    color:whitesmoke
+    color:whitesmoke;
+    font-family: 'Nunito', sans-serif;
 }
 .span{
     font-size:14px;
@@ -45,6 +47,7 @@ h4{
 footer p{
     text-align: center;
     margin-top:1%;
+    font-family: 'Nunito', sans-serif;
 }
 .footerIcons{
     margin-left:45%;
@@ -54,4 +57,5 @@ footer{
     text-align: center;
     color:whitesmoke;
     font-size:12px;
+    font-family: 'Nunito', sans-serif;
 }
