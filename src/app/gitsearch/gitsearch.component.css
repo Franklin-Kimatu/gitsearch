@@ -26,6 +26,12 @@ button{
     margin-left:40%;
 }
 hr{
-    color:white;
     background-color: whitesmoke;
+}
+h4{
+    color:whitesmoke
+}
+.span{
+    font-size:14px;
+    
 }
