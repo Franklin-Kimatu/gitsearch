@@ -75,6 +75,9 @@ footer{
 .card-footer{
     background-color: whitesmoke;
 }
+.lead{
+    color:whitesmoke;
+}
 @media screen and (max-width:580px){
     .image-card{
         width: 200px;

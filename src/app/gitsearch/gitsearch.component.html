@@ -2,6 +2,9 @@
 
 <div class="overlay">
     <app-gitsearch-form (emitSearch)="searchThis($event)"></app-gitsearch-form>
+    <div class="text-center">
+        <p class="lead" *ngIf="loading">Loading...</p>
+    </div>
     <div *ngIf="users">
         <div class="card-columns">
             <div *ngFor="let user of users">

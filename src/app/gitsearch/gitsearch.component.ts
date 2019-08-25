@@ -9,9 +9,11 @@ import { Repositories } from '../repository/repositories';
   styleUrls: ['./gitsearch.component.css']
 })
 export class GitsearchComponent implements OnInit {
+  private loading:boolean= false;
   users:GitsearchUser[]=[];
   reposy:Repositories;
   searchThis(searchTerm){
+    this.loading= true;
     this.myService.searchUsers(searchTerm).then(
       ()=>{
         // this.users= this.myService.users;
@@ -24,6 +26,7 @@ export class GitsearchComponent implements OnInit {
     this.myService2.searchReposities(searchTerm).then(
       (success)=>{
         this.reposy = this.myService2.repos;
+        this.loading= false;
         console.log(this.reposy);
       },
       (error)=>{
