@@ -33,5 +33,25 @@ h4{
 }
 .span{
     font-size:14px;
-    
+
+}
+/* footer{
+    display: flex;
+} */
+.footerIcons i{
+    font-size:40px;
+    text-align:center;
+}
+footer p{
+    text-align: center;
+    margin-top:1%;
+}
+.footerIcons{
+    margin-left:45%;
+}
+footer{
+    background-color:rgba(0,0,0,0.8);
+    text-align: center;
+    color:whitesmoke;
+    font-size:12px;
 }
