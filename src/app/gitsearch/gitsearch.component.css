@@ -16,3 +16,8 @@ button{
     background-color: black;
 
 }
+.container{
+    background-color: rgba(0,0,0,0.8);
+    border:1px hidden;
+    border-radius:5px;
+}
