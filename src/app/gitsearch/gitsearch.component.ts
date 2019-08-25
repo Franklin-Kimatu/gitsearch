@@ -10,7 +10,7 @@ import { Repositories } from '../repository/repositories';
 })
 export class GitsearchComponent implements OnInit {
   users:GitsearchUser[]=[];
-  repos:Repositories[]=[];
+  reposy:Repositories;
   searchThis(searchTerm){
     this.myService.searchUsers(searchTerm).then(
       ()=>{
@@ -21,17 +21,19 @@ export class GitsearchComponent implements OnInit {
         console.log(error)
       }
     )
-  }
-
-  searchRepos(searchTerm){
     this.myService2.searchReposities(searchTerm).then(
-      ()=>{
-        this.repos = this.myService2.repos;
+      (success)=>{
+        this.reposy = this.myService2.repos;
+        console.log(this.reposy);
       },
       (error)=>{
         console.log(error);
       }
     )
+  }
+
+  searchRepos(searchTerm){
+    
   }
   // searchRepos(searchTerm){
   //   this.myService2.searchReposities(searchTerm).then(
@@ -46,7 +48,7 @@ export class GitsearchComponent implements OnInit {
   constructor(public myService:MyServiceService, public myService2:MyService2Service) { }
 
   ngOnInit() {
-      this.myService.searchUsers("Franklin-Kimatu")
+      this.searchThis('Franklin-Kimatu')
   }
 
 }

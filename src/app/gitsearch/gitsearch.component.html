@@ -32,25 +32,27 @@
                         </div>
                     </div>
                 </div>
-        </div>
-        <div *ngIf="users">
-            <div class="cards-columns">
-                <div *ngFor="let user of users">
-                    <div class="card">
-                        <!-- <a href="{{user.repos_url}}">{{user.public_repos}}&nbsp;Repositories</a> -->
-                        <button class="btn btn-success"(click)="searchRepos($event)">Repositories</button>
+                <div class="cards">
+                    <div >
+                        <div class="card" *ngFor="let repo of reposy">
+                            <div class="card-body">
+                                {{repo.name}}
+                            </div>
+                        </div>
                     </div>
+                </div>
+        </div>
+
+        <div *ngIf="repos">
+
+        </div>
+
+        <div class="container">
+            <div class="card" *ngFor="let repo of repos">
+                <div class="card-body">
+                    {{repo.name}}
                 </div>
             </div>
         </div>
 
-        <div *ngIf="repos">
-            <div class="cards-columns">
-                <div *ngFor="let repo of repos">
-                    <div class="card">
-                        {{repo.name}}
-                    </div>
-                </div>
-            </div>
-        </div>
 </div>
