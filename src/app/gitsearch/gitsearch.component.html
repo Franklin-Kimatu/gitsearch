@@ -1,62 +1,34 @@
 <app-navbar></app-navbar>
+<app-gitsearch-form (emitSearch)="searchThis($event)"></app-gitsearch-form>
 <div class="container">
-        <app-gitsearch-form (emitSearch)="searchThis($event)"></app-gitsearch-form>
-        <!-- <div *ngIf="users">
-            <div class="cards-columns">
-               <p>{{name}}</p> 
+    <div *ngIf="users">
+        <div class="card-columns">
+            <div *ngFor="let user of users">
+
+
+                <div class="card image-card">
+                    <img src="{{user.avatar_url}}" class="card-img">
+
+                </div>
             </div>
-        </div> -->
-        
-        <div *ngIf="users">
-            <div class="cards-columns">
-                <div *ngFor="let user of users">
-                    <div class="card">
-                        <p>{{user.login}}</p>
-                        
+
+        </div>
+        <div *ngFor="let user of users">
+            <p>{{user.login}}</p>
+            <button class="btn btn-success">{{user.followers}} followers</button><br>
+            <button class="btn btn-success">{{user.following}} following</button>
+        </div>
+        <div class="cards">
+            <div class="cards_styling">
+                <div class="card" *ngFor="let repo of reposy" style="width: 21rem;">
+                    <div class="card-header">
+                        {{repo.name}}
+                    </div>
+                    <div class="card-body">
+
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <ul>
-            <li *ngFor=let user of users.results>
-                {{user.name}}
-            </li>
-        </ul> -->
-        <div *ngIf="users">
-                <div class="card-columns">
-                    <div *ngFor="let user of users">
-                        <div class="card">
-                            <img src="{{user.avatar_url}}" class="card-img">
-                            
-                        </div>
-                        <button class="btn btn-success">{{user.followers}} followers</button><br>
-                        <button class="btn btn-success">{{user.following}} following</button>
-                    </div>
-                </div>
-                <div class="cards">
-                    <div>
-                        <div class="card" *ngFor="let repo of reposy" style="width: 18rem;">
-                            <div class="card-header">
-                                {{repo.name}}
-                              </div>
-                            <div class="card-body">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-
-        <div *ngIf="repos">
-
-        </div>
-
-        <div class="container">
-            <div class="card" *ngFor="let repo of repos">
-                <div class="card-body">
-                    {{repo.name}}
-                </div>
-            </div>
-        </div>
-
+    </div>
 </div>

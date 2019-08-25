@@ -1,0 +1,18 @@
+.cards_styling{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card{
+    margin:1%;
+    
+}
+.image-card{
+    text-align: center;
+    margin-left:90%; 
+}
+button{
+    color:white;;
+    background-color: black;
+
+}
