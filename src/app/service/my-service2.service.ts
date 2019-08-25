@@ -16,6 +16,7 @@ interface najiskia{
   name:string;
   html_url:any;
   created_at:string;
+  forks_count:number;
 }
 
     let searchRepoUrl = "https://api.github.com/users/"+ searchTerm+ "/repos?";
