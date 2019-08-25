@@ -5,7 +5,10 @@
 }
 .card{
     margin:1%;
-    background-color:whitesmoke;
+    background-color:grey;
+    border:1px hidden;
+    box-sizing:border-box;
+    box-shadow:1px 1px 3px 3px whitesmoke
 }
 .image-card{
     text-align: center;
@@ -16,15 +19,18 @@ button{
     margin-left:40%;
 
 }
-.container{
+.overlay{
     background-color: rgba(0,0,0,0.7);
     border:1px hidden;
     border-radius:5px;
+    margin-left: 2%;
+    margin-right:2%;
 }
 .userlogin{
     color:white;
     margin-left:40%;
     font-family: 'Nunito', sans-serif;
+    font-size:20px;
 }
 hr{
     background-color: whitesmoke;
@@ -32,6 +38,7 @@ hr{
 h4{
     color:whitesmoke;
     font-family: 'Nunito', sans-serif;
+    
 }
 .span{
     font-size:14px;
@@ -59,3 +66,18 @@ footer{
     font-size:12px;
     font-family: 'Nunito', sans-serif;
 }
+.card-body{
+    background-color: whitesmoke;
+}
+.card-header{
+    color:whitesmoke;
+}
+.card-footer{
+    background-color: whitesmoke;
+}
+@media screen and (max-width:580px){
+    .image-card{
+        width: 200px;
+        margin-left:20%;
+    }
+    } 

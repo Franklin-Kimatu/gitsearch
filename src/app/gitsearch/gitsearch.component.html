@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 
-<div class="container">
+<div class="overlay">
     <app-gitsearch-form (emitSearch)="searchThis($event)"></app-gitsearch-form>
     <div *ngIf="users">
         <div class="card-columns">
@@ -25,7 +25,7 @@
             <div class="cards_styling">
                 <div class="card" *ngFor="let repo of reposy" style="width: 21rem;">
                     <div class="card-header">
-                        {{repo.name}}
+                        Repo name:{{repo.name}}
                     </div>
                     <div class="card-body">
                         <p>Description</p>
