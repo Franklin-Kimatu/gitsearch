@@ -13,7 +13,8 @@ export class MyService2Service {
 
   searchReposities(searchTerm:string){
 interface najiskia{
-  name:string
+  name:string;
+  html_url:any
 }
 
     let searchRepoUrl = "https://api.github.com/users/"+ searchTerm+ "/repos?";

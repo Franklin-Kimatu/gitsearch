@@ -15,9 +15,9 @@
 
         </div>
         <div *ngFor="let user of users">
-            <p>{{user.login}}</p>
-            <button class="btn btn-success">{{user.followers}} followers</button><br>
-            <button class="btn btn-success">{{user.following}} following</button>
+            <p class="userlogin">{{user.login}}</p>
+            <button class="btn btn-dark">{{user.followers}} followers</button><br>
+            <button class="btn btn-dark">{{user.following}} following</button>
         </div>
         <div class="cards">
             <div class="cards_styling">
@@ -26,7 +26,10 @@
                         {{repo.name}}
                     </div>
                     <div class="card-body">
-
+                        
+                    </div>
+                    <div class="card-footer">
+                            <a href="{{repo.html_url}}"><button class="btn btn-dark" title="View repository"><i class="fas fa-eye"></i></button></a>
                     </div>
                 </div>
             </div>
