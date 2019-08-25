@@ -1,27 +1,18 @@
 # Gitsearch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.1.
+## Author and collaborators
+* Kimatu Franklin.
+* Lastborn Tech. Company.
+## Description
+* The gitsearch app is an application that one cna search their github user names. It comes along with their repositories and the details of the repository. It also show the number of forks the respective repositories have had. Click on this link the view it and search yours too.https://franklin-kimatu.github.io/gitsearch/
+## Technologies used.
+* Angular-Cli.
+* Html.
+* CSS.
+* Bootstrap.
+* Typescript.
+## Licence.
+* MIT license.
 
 ## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
