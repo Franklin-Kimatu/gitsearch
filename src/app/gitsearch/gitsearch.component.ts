@@ -36,7 +36,10 @@ export class GitsearchComponent implements OnInit {
     )
   }
 
-
+  searchRepos(searchTerm){
+    
+  }
+ 
   constructor(public myService:MyServiceService, public myService2:MyService2Service) { }
 
   ngOnInit() {
