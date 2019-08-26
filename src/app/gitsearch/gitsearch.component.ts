@@ -9,7 +9,7 @@ import { Repositories } from '../repository/repositories';
   styleUrls: ['./gitsearch.component.css']
 })
 export class GitsearchComponent implements OnInit {
-  private loading:boolean= false;
+  public loading:boolean= false;
   users:GitsearchUser[]=[];
   reposy:Repositories;
   searchThis(searchTerm){
