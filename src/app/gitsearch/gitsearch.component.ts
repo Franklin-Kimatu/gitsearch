@@ -18,6 +18,7 @@ export class GitsearchComponent implements OnInit {
       ()=>{
         // this.users= this.myService.users;
         this.users = this.myService.users
+        this.loading= false;
       },
       (error)=>{
         console.log(error)

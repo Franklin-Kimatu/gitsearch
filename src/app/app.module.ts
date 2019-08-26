@@ -6,14 +6,18 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GitsearchFormComponent } from './gitsearch-form/gitsearch-form.component';
 import { GitsearchComponent } from './gitsearch/gitsearch.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { TimeCountPipe } from './time-count.pipe';
+import { GitsearchdirectiveDirective } from './gitsearchdirective.directive'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     GitsearchFormComponent,
-    GitsearchComponent
+    GitsearchComponent,
+    TimeCountPipe,
+    GitsearchdirectiveDirective
   ],
   imports: [
     BrowserModule,
