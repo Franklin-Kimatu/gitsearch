@@ -20,7 +20,7 @@ interface najiskia{
 }
 
     let searchRepoUrl = "https://api.github.com/users/"+ searchTerm+ "/repos?";
-    let token ="?access_token="+ environment.GITSEARCHAPIKEY;
+    let token ="?access_token=23998e592593b005337d2544e6700fa73e21da39";
     let searchRepoEndPoint= searchRepoUrl +token;
     let promise = new Promise ((resolve,reject)=>{
       this.http.get<najiskia>(searchRepoEndPoint).toPromise().then(

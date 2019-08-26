@@ -12,7 +12,7 @@ export class MyServiceService {
   constructor(public http:HttpClient) { }
 
   searchUsers(searchTerm:string){
-    let searchEndPoint = "https://api.github.com/users/"+searchTerm+"?access_token="+environment.GITSEARCHAPIKEY;
+    let searchEndPoint = "https://api.github.com/users/"+searchTerm+"?access_token=23998e592593b005337d2544e6700fa73e21da39";
     
     
     let promise = new Promise((resolve,reject)=>{
