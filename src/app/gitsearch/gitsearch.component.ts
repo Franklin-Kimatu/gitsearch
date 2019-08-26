@@ -16,7 +16,7 @@ export class GitsearchComponent implements OnInit {
     this.loading= true;
     this.myService.searchUsers(searchTerm).then(
       ()=>{
-        // this.users= this.myService.users;
+        
         this.users = this.myService.users
         this.loading= false;
       },
@@ -36,19 +36,7 @@ export class GitsearchComponent implements OnInit {
     )
   }
 
-  searchRepos(searchTerm){
-    
-  }
-  // searchRepos(searchTerm){
-  //   this.myService2.searchReposities(searchTerm).then(
-  //     ()=>{
-  //       this.repos = this.myService2.repos
-  //     },
-  //     (error)=>{
-  //       console.log(error);
-  //     }
-  //   )
-  // }
+
   constructor(public myService:MyServiceService, public myService2:MyService2Service) { }
 
   ngOnInit() {
